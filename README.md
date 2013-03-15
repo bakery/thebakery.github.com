@@ -1,4 +1,4 @@
 thebakeryio.github.com
 ======================
 
-Something tasty is in the making
+Something delicious is in the making
