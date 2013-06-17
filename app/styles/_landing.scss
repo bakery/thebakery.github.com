@@ -7,9 +7,16 @@
 		a {
 			color:#fff;
 			position: absolute;
-			right: 1em; bottom: 1em;
+			right: 40px; bottom: 1em;
             font-weight: 200;
             font-style: italic;
+            background: {
+            	image: url('../images/icons/pin.png');
+            	size: 20px 20px;
+            	repeat: no-repeat;
+            }
+            padding-left: 21px;
+			min-height: 30px;
 		}
 	}
 }
