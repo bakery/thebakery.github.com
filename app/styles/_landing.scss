@@ -9,6 +9,7 @@
 			position: absolute;
 			right: 1em; bottom: 1em;
             font-weight: 200;
+            font-style: italic;
 		}
 	}
 
@@ -25,13 +26,14 @@
 	}
 
 	.sub-jumbo-slogan {
-	    font-size: 2em;
+	    font-size: 2.5em;
 		background-color: rgba(0, 0, 0, 0.5);
 		color: #fff;
 		display: inline-block;
 		padding: 5px 20px 5px 20px;
 		margin-top: -1em;
         font-weight: 200;
+        min-width: 300px;
 	}
 }
 
