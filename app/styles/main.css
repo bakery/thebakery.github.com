@@ -665,18 +665,27 @@ textarea {
   right: 1em;
   bottom: 1em;
 }
-/* line 14, _landing.scss */
-.splash .jumbo-slogan {
+
+/* line 15, _landing.scss */
+.slogan-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 324px;
+}
+/* line 19, _landing.scss */
+.slogan-wrapper .jumbo-slogan {
   font-size: 5em;
   text-transform: uppercase;
-  margin-top: 2em;
+  margin-top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   display: inline-block;
   padding: 5px 20px 5px 20px;
 }
-/* line 24, _landing.scss */
-.splash .sub-jumbo-slogan {
+/* line 29, _landing.scss */
+.slogan-wrapper .sub-jumbo-slogan {
   font-size: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -684,12 +693,17 @@ textarea {
   padding: 5px 20px 5px 20px;
   margin-top: -1em;
 }
+/* line 38, _landing.scss */
+.slogan-wrapper div {
+  position: relative;
+  top: -50%;
+}
 
-/* line 34, _landing.scss */
+/* line 43, _landing.scss */
 .baker-pic-wrapper {
   text-align: center;
 }
-/* line 36, _landing.scss */
+/* line 45, _landing.scss */
 .baker-pic-wrapper img {
   display: inline;
   border-radius: 40px;
