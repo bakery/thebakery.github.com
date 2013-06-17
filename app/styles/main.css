@@ -692,4 +692,5 @@ textarea {
 /* line 36, _landing.scss */
 .baker-pic-wrapper img {
   display: inline;
+  border-radius: 40px;
 }
