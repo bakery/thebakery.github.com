@@ -1,30 +1,73 @@
+/* line 23, _utilities.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 13, _utilities.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 17, _utilities.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 67, _utilities.scss */
+.center {
+  text-align: center;
+}
+
+/* line 68, _utilities.scss */
+.right {
+  text-align: right;
+}
+
+/* line 69, _utilities.scss */
+.left {
+  text-align: left;
+}
+
+@font-face {
+  font-family: Corbert;
+  src: url("../fonts/corbert.otf");
+}
+
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 7, _base.scss */
+/* line 15, _base.scss */
 html {
-  font-family: sans-serif;
+  font-family: Corbert, sans-serif;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */
+  height: 100%;
+  min-height: 100%;
 }
 
 /**
  * Remove default margin.
  */
-/* line 17, _base.scss */
+/* line 27, _base.scss */
 body {
   margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 33, _base.scss */
+a {
+  text-decoration: none;
 }
 
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 25, _base.scss */
+/* line 41, _base.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -32,13 +75,13 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 34, _base.scss */
+/* line 50, _base.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 38, _base.scss */
+/* line 54, _base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -47,7 +90,7 @@ table {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 47, _base.scss */
+/* line 63, _base.scss */
 img {
   border: 0;
 }
@@ -55,7 +98,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 55, _base.scss */
+/* line 71, _base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -63,9 +106,46 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 63, _base.scss */
+/* line 79, _base.scss */
 figure {
   margin: 0;
+}
+
+/* line 83, _base.scss */
+header {
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  width: 70px;
+  margin-left: -35px;
+  z-index: 100;
+  min-height: 70px;
+  color: white;
+  text-align: center;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../images/icons/logo.png");
+  background-repeat: no-repeat;
+  background-position: 58% 52%;
+  background-size: 50px 50px;
+}
+
+/* line 102, _base.scss */
+footer {
+  text-align: center;
+  padding: 1em;
+  margin-top: 40px;
+}
+/* line 106, _base.scss */
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+/* line 110, _base.scss */
+footer ul li {
+  display: inline;
+  margin-left: 1em;
 }
 
 /* ==========================================================================
@@ -233,6 +313,192 @@ sub {
   bottom: -0.25em;
 }
 
+/* line 7, _grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, _grid.scss */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 19, _grid.scss */
+.container {
+  zoom: 1;
+  width: 980px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+/* line 13, _utilities.scss */
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+/* line 17, _utilities.scss */
+.container:after {
+  clear: both;
+}
+
+/* line 27, _grid.scss */
+.responsive .container {
+  width: auto;
+  max-width: 980px;
+}
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  /* line 27, _grid.scss */
+  .responsive .container {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 27, _grid.scss */
+  .responsive .container {
+    margin: 0;
+    padding: 0 15px;
+  }
+}
+
+/* line 47, _grid.scss */
+.row {
+  zoom: 1;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+/* line 13, _utilities.scss */
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+/* line 17, _utilities.scss */
+.row:after {
+  clear: both;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 56, _grid.scss */
+  .responsive .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 66, _grid.scss */
+.field-row {
+  zoom: 1;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+/* line 13, _utilities.scss */
+.field-row:before, .field-row:after {
+  content: "";
+  display: table;
+}
+/* line 17, _utilities.scss */
+.field-row:after {
+  clear: both;
+}
+/* line 71, _grid.scss */
+.field-row [class*="span"] {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 78, _grid.scss */
+  .responsive .field-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 82, _grid.scss */
+  .responsive .field-row [class*="span"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 93, _grid.scss */
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  padding: 0 10px;
+}
+/* line 98, _grid.scss */
+[class*="span"]:last-child {
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 104, _grid.scss */
+  .responsive [class*="span"] {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 115, _grid.scss */
+.span1 {
+  width: 8.33333%;
+}
+
+/* line 115, _grid.scss */
+.span2 {
+  width: 16.66667%;
+}
+
+/* line 115, _grid.scss */
+.span3 {
+  width: 25%;
+}
+
+/* line 115, _grid.scss */
+.span4 {
+  width: 33.33333%;
+}
+
+/* line 115, _grid.scss */
+.span5 {
+  width: 41.66667%;
+}
+
+/* line 115, _grid.scss */
+.span6 {
+  width: 50%;
+}
+
+/* line 115, _grid.scss */
+.span7 {
+  width: 58.33333%;
+}
+
+/* line 115, _grid.scss */
+.span8 {
+  width: 66.66667%;
+}
+
+/* line 115, _grid.scss */
+.span9 {
+  width: 75%;
+}
+
+/* line 115, _grid.scss */
+.span10 {
+  width: 83.33333%;
+}
+
+/* line 115, _grid.scss */
+.span11 {
+  width: 91.66667%;
+}
+
+/* line 115, _grid.scss */
+.span12 {
+  width: 100%;
+}
+
 /**
  * Define consistent border, margin, and padding.
  */
@@ -380,4 +646,50 @@ textarea {
   /* 1 */
   vertical-align: top;
   /* 2 */
+}
+
+/* line 1, _landing.scss */
+.splash {
+  position: relative;
+  height: 100%;
+  background: url("../images/backgrounds/trento.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 7, _landing.scss */
+.splash .footer a {
+  color: #fff;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+/* line 14, _landing.scss */
+.splash .jumbo-slogan {
+  font-size: 5em;
+  text-transform: uppercase;
+  margin-top: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+}
+/* line 24, _landing.scss */
+.splash .sub-jumbo-slogan {
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  margin-top: -1em;
+}
+
+/* line 34, _landing.scss */
+.baker-pic-wrapper {
+  text-align: center;
+}
+/* line 36, _landing.scss */
+.baker-pic-wrapper img {
+  display: inline;
 }

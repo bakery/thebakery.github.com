@@ -1,0 +1,39 @@
+.splash {
+	position: relative;
+	height: 100%;
+	@include full-background-image("../images/backgrounds/trento.png");
+
+	.footer {
+		a {
+			color:#fff;
+			position: absolute;
+			right: 1em; bottom: 1em;
+		}
+	}
+
+	.jumbo-slogan {
+	    font-size: 5em;
+	    text-transform: uppercase;
+	    margin-top: 2em;
+	    background-color: rgba(0,0,0,0.5);
+	    color: #fff;
+	    display: inline-block;
+	    padding: 5px 20px 5px 20px;
+	}
+
+	.sub-jumbo-slogan {
+	    font-size: 2em;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		display: inline-block;
+		padding: 5px 20px 5px 20px;
+		margin-top: -1em;
+	}
+}
+
+.baker-pic-wrapper {
+	text-align:center;
+	img {
+		display: inline;
+	}
+}
