@@ -4,3 +4,4 @@ dist
 _site
 node_modules
 .sass-cache
+app/styles/main.css
