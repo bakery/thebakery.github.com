@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         copy: {
             prebuild: {
                 files: [
-                    {expand: true, cwd: '<%= settings.appDirectory %>', src: ['index.html'], dest: '<%= settings.distDirectory %>'}
+                    {expand: true, cwd: '<%= settings.appDirectory %>', src: ['index.html'], dest: '<%= settings.distDirectory %>'},
+                    {expand: true, cwd: '<%= settings.appDirectory %>', src: ['images/**/*'], dest: '<%= settings.distDirectory %>'}
                     //{expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'} // flattens results to a single level
                 ]
             }
@@ -204,6 +205,6 @@ module.exports = function(grunt) {
     grunt.registerTask('init', ['shell:bower']);
     grunt.registerTask('default', ['jshint','compass','livereload-start', 'connect:server', 'regarde:server']);
 
-    grunt.registerTask('build',['clean:dist','copy:prebuild','useminPrepare','requirejs','compass:dist','rev','usemin']);
+    grunt.registerTask('build',['clean:dist','copy:prebuild','useminPrepare',/*'requirejs',*/'compass:dist','rev','usemin']);
 
 };
