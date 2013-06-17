@@ -1,13 +1,13 @@
 .splash {
 	position: relative;
 	height: 100%;
-	@include full-background-image("../images/backgrounds/trento.png");
+	@include full-background-image("../images/backgrounds/trento.jpg");
 
 	.footer {
 		position: absolute; left: 0; right: 0; bottom: 0;
 		text-align: center;
 		padding-bottom: 1em;
-		
+
 		a {
 			color:#fff;
             font-weight: 200;
