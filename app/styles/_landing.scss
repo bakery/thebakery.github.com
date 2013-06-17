@@ -8,17 +8,20 @@
 			color:#fff;
 			position: absolute;
 			right: 1em; bottom: 1em;
+            font-weight: 200;
 		}
 	}
 
 	.jumbo-slogan {
-	    font-size: 5em;
+        font-family: raleway;
+	    font-size: 6em;
 	    text-transform: uppercase;
 	    margin-top: 2em;
 	    background-color: rgba(0,0,0,0.5);
 	    color: #fff;
 	    display: inline-block;
 	    padding: 5px 20px 5px 20px;
+        font-weight: 300;
 	}
 
 	.sub-jumbo-slogan {
@@ -28,6 +31,7 @@
 		display: inline-block;
 		padding: 5px 20px 5px 20px;
 		margin-top: -1em;
+        font-weight: 200;
 	}
 }
 
