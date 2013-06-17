@@ -10,11 +10,16 @@
 			right: 1em; bottom: 1em;
 		}
 	}
+}
+
+.slogan-wrapper {
+	position:absolute; left:0; right:0; top:50%;
+	height: 324px;
 
 	.jumbo-slogan {
 	    font-size: 5em;
 	    text-transform: uppercase;
-	    margin-top: 2em;
+	    margin-top: 0;
 	    background-color: rgba(0,0,0,0.5);
 	    color: #fff;
 	    display: inline-block;
@@ -28,6 +33,10 @@
 		display: inline-block;
 		padding: 5px 20px 5px 20px;
 		margin-top: -1em;
+	}
+
+	div {
+		position: relative;top: -50%;
 	}
 }
 
