@@ -653,12 +653,18 @@ textarea {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 7, _landing.scss */
+/* line 6, _landing.scss */
+.splash .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 1em;
+}
+/* line 11, _landing.scss */
 .splash .footer a {
   color: #fff;
-  position: absolute;
-  right: 40px;
-  bottom: 1em;
   font-weight: 200;
   font-style: italic;
   background-image: url("../images/icons/pin.png");
@@ -668,7 +674,7 @@ textarea {
   min-height: 30px;
 }
 
-/* line 24, _landing.scss */
+/* line 26, _landing.scss */
 .slogan-wrapper {
   position: absolute;
   left: 0;
@@ -676,7 +682,7 @@ textarea {
   top: 50%;
   height: 324px;
 }
-/* line 28, _landing.scss */
+/* line 30, _landing.scss */
 .slogan-wrapper .jumbo-slogan {
   font-family: raleway;
   font-size: 6em;
@@ -688,7 +694,7 @@ textarea {
   padding: 5px 20px 5px 20px;
   font-weight: 300;
 }
-/* line 40, _landing.scss */
+/* line 42, _landing.scss */
 .slogan-wrapper .sub-jumbo-slogan {
   font-size: 2.5em;
   background-color: rgba(0, 0, 0, 0.5);
@@ -699,17 +705,17 @@ textarea {
   font-weight: 200;
   min-width: 300px;
 }
-/* line 51, _landing.scss */
+/* line 53, _landing.scss */
 .slogan-wrapper div {
   position: relative;
   top: -50%;
 }
 
-/* line 56, _landing.scss */
+/* line 58, _landing.scss */
 .baker-pic-wrapper {
   text-align: center;
 }
-/* line 58, _landing.scss */
+/* line 60, _landing.scss */
 .baker-pic-wrapper img {
   display: inline;
   border-radius: 40px;

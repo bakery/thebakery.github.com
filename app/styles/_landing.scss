@@ -4,10 +4,12 @@
 	@include full-background-image("../images/backgrounds/trento.png");
 
 	.footer {
+		position: absolute; left: 0; right: 0; bottom: 0;
+		text-align: center;
+		padding-bottom: 1em;
+		
 		a {
 			color:#fff;
-			position: absolute;
-			right: 40px; bottom: 1em;
             font-weight: 200;
             font-style: italic;
             background: {
