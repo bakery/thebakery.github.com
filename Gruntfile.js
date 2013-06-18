@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         copy: {
             prebuild: {
                 files: [
-                    {expand: true, cwd: '<%= settings.appDirectory %>', src: ['index.html'], dest: '<%= settings.distDirectory %>'},
+                    {expand: true, cwd: '<%= settings.appDirectory %>', src: ['index.html', 'confirm.html', 'thank-you.html'], dest: '<%= settings.distDirectory %>'},
                     {expand: true, cwd: '<%= settings.appDirectory %>', src: ['images/**/*'], dest: '<%= settings.distDirectory %>'}
                     //{expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'} // flattens results to a single level
                 ]
