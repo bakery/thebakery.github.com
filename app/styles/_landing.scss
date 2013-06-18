@@ -6,15 +6,17 @@
 	.footer {
 
 		@include respond-to(tablet-desktop){
-			position: absolute; left: 0; right: 0; bottom: 0;	
+			position: absolute; left: 0; right: 0; bottom: 0;
 		}
 
-		
 		text-align: center;
 		padding-bottom: 1em;
 
 		a {
 			color:#fff;
+        }
+
+        .location {
             font-weight: 200;
             font-style: italic;
             background: {
@@ -25,23 +27,38 @@
             padding-left: 21px;
 			min-height: 30px;
 		}
+
+        .down-arrow {
+            display: block;
+            background: {
+                image: url('../images/icons/downarrow.png');
+                size: 32px 32px;
+                repeat: no-repeat;
+            }
+            height: 32px;
+            width: 32px;
+            margin: 0.5em auto 0 auto;
+        }
+
+
 	}
+
 }
 
 .slogan-wrapper {
 
 	@include respond-to(tablet-desktop){
-		position:absolute; left:0; right:0; top:50%;	
+		position:absolute; left:0; right:0; top:50%;
 		height: 324px;
 	}
 
 	@include respond-to(mobile){
 		padding-top:100px;
 	}
-	
+
 	.jumbo-slogan {
         font-family: raleway;
-	    
+
 	    @include respond-to(tablet-desktop){
 			font-size: 6em;
 		}
@@ -67,16 +84,16 @@
 
 		@include respond-to(mobile){
 			font-size: 1.5em;
-		
+
 		}
 
 		margin-top: -1em;
-	    
+
 		background-color: rgba(0, 0, 0, 0.5);
 		color: #fff;
 		display: inline-block;
 		padding: 5px 20px 5px 20px;
-		
+
         font-weight: 200;
         min-width: 300px;
 	}
