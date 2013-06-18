@@ -10,9 +10,9 @@ var folderMount = function folderMount(connect, point) {
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        
+
         pkg: grunt.file.readJSON('package.json'),
-        
+
         settings : {
             appDirectory : "app",
             testDirectory : "test",
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    name: 'vendor/almond',
+                    name: 'vendor/almond/almond',
                     include: ['main'],
                     baseUrl: "<%= settings.appDirectory %>/scripts",
                     mainConfigFile: "<%= settings.appDirectory %>/scripts/main.js"
@@ -101,8 +101,8 @@ module.exports = function(grunt) {
             }
         },
 
-        compass: {    
-            dist: {   
+        compass: {
+            dist: {
                 options: {
                     sassDir: '<%= settings.appDirectory %>/styles',
                     cssDir: '<%= settings.distDirectory %>/styles',
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
                     force:true
                 }
             },
-            dev: {                 
+            dev: {
                 options: {
                     sassDir: '<%= settings.appDirectory %>/styles',
                     cssDir: '<%= settings.appDirectory %>/styles',
@@ -143,9 +143,9 @@ module.exports = function(grunt) {
                         return [lrSnippet, folderMount(connect, options.base)];
                     }
                 }
-            }            
+            }
         },
-        
+
         regarde: {
             server : {
                 files: ['<%= settings.appDirectory %>/styles/*.scss', '<%= settings.appDirectory %>/scripts/**/*.js'],
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
 
             test : {
                 files: ['<%= settings.appDirectory %>/scripts/**/*.js', '<%= settings.testDirectory %>/spec/**/*.js', '<%= settings.testDirectory %>/index.html'],
-                tasks: ['jshint','livereload']  
+                tasks: ['jshint','livereload']
             }
         },
 
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
                     stderr: true
                 }
             }
-        } 
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -205,6 +205,6 @@ module.exports = function(grunt) {
     grunt.registerTask('init', ['shell:bower']);
     grunt.registerTask('default', ['jshint','compass','livereload-start', 'connect:server', 'regarde:server']);
 
-    grunt.registerTask('build',['clean:dist','copy:prebuild','useminPrepare',/*'requirejs',*/'compass:dist','rev','usemin']);
+    grunt.registerTask('build',['clean:dist','copy:prebuild','useminPrepare','requirejs','compass:dist','rev','usemin']);
 
 };
