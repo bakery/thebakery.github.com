@@ -45,6 +45,13 @@
 
 }
 
+.twitter {
+    a {
+        color: #54aee1;
+        text-decoration: none;
+    }
+}
+
 .slogan-wrapper {
 
 	@include respond-to(tablet-desktop){
