@@ -1,7 +1,7 @@
 .splash {
 	position: relative;
 	height: 100%;
-	@include full-background-image("../images/backgrounds/trento.jpg");
+	@include full-background-image("../images/backgrounds/berlin.jpg");
 
 	.footer {
 
@@ -164,4 +164,14 @@
     top: 40%;
     width: 100%;
     text-align: center;
+}
+
+.projects {
+   padding-left: 20px;
+
+    li {
+        line-height: 1.4em;
+        list-style: circle;
+        margin-bottom: 10px;
+    }
 }
