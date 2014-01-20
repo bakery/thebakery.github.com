@@ -1,7 +1,11 @@
+h1 {
+    margin: 2em 0 1em 0;
+}
+
 .splash {
 	position: relative;
 	height: 100%;
-	@include full-background-image("../images/backgrounds/berlin.jpg");
+	@include full-background-image("../images/backgrounds/hongkong.jpg");
 
 	.footer {
 
