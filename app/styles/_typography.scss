@@ -2,6 +2,10 @@
    Typography
    ========================================================================== */
 
+h1, h2, h3, h4, p, li {
+    color: $base-font-color;
+}
+
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
