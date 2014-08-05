@@ -1,0 +1,25 @@
+.skilltide {
+
+    padding-top: 120px;
+    background-color: $light-grey;
+
+    .container {
+        background-color: white;
+        padding: 60px 80px;
+        box-shadow: 0 1px 3px $medium-grey;
+        border: 1px solid $medium-grey;
+    }
+
+    ul {
+        li {
+            margin-top: 16px;
+            line-height: 22px;
+            color: $dark-grey;
+            font-weight: 100;
+
+            strong {
+                color: black;
+            }
+        }
+    }
+}
