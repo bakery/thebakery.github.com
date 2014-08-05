@@ -1,5 +1,5 @@
 h1 {
-    margin: 0 0 1em 0;
+    margin: 0 0 1.5em 0;
 }
 
 .splash {
@@ -127,11 +127,7 @@ h1 {
     }
 
     .button{
-
-        -moz-border-radius:0px;
-        -webkit-border-radius:0px;
-        border-radius:0px;
-
+        @include border-radius(0);
         border:1px solid #dcdcdc;
         padding: 6px 18px;
         text-decoration:none;
@@ -143,10 +139,8 @@ h1 {
         background-color:#ededed;
         color:#777777;
 
-        text-shadow:1px 1px 0px #ffffff;
-        -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
-        -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
-        box-shadow:inset 1px 1px 0px 0px #ffffff;
+        @include text-shadow(1px 1px 0px #fff);
+        @include box-shadow(inset 1px 1px 0px 0px #fff);
 
         &:hover {
             background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #dfdfdf), color-stop(100%, #ededed) );
@@ -170,7 +164,7 @@ h1 {
     text-align: center;
 }
 
-.projects {
+ul {
    padding-left: 20px;
    margin: 0;
 
@@ -186,15 +180,47 @@ section {
     padding-bottom: 60px;
 }
 
-.client-section, .bakers {
+.what {
+    strong {
+        font-weight: 400;
+    }
+
+    .contact {
+        text-align: center;
+        border: 1px solid #bbb;
+        width: 400px;
+        margin: 60px auto 0 auto;
+    }
+}
+
+.testimonials, .team {
     width: 100%;
     background: #F5F7F9;
     border-bottom: 1px solid #E9EDF1;
     border-top: 1px solid #E9EDF1;    
 }
 
-.testimony {
-    font-size: 18px;
+.quote {
+    font-size: 20px;
     font-style: italic;
+}
+
+.author {
+    margin-top: 40px;
+    text-align: center;
+
+    img {
+        @include border-radius(100px);
+        margin-right: 20px;
+    }
+
+    .name, img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .name {
+        text-align: left;
+    }
 }
 
