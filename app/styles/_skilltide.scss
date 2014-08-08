@@ -1,11 +1,15 @@
 .skilltide {
 
-    padding-top: 120px;
+    padding-top: 100px;
     background-color: $light-grey;
+
+    h1 {
+        margin-bottom: 1em;
+    }
 
     .container {
         background-color: white;
-        padding: 60px 80px;
+        padding: 50px 80px;
         box-shadow: 0 1px 3px $medium-grey;
         border: 1px solid $medium-grey;
     }
