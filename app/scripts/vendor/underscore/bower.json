@@ -1,8 +1,8 @@
 {
   "name": "underscore",
-  "version": "1.4.4",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/documentcloud/underscore.git"
-  }
+  "version": "1.6.0",
+  "main": "underscore.js",
+  "keywords": ["util", "functional", "server", "client", "browser"],
+  "ignore" : ["underscore-min.js", "docs", "test", "*.yml", "*.map",
+              "CNAME", "index.html", "favicon.ico", "CONTRIBUTING.md"]
 }
