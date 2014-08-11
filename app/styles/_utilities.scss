@@ -67,3 +67,7 @@ $desktop-start: $tablet-end + 1;
 .center { text-align:center; }
 .right { text-align:right; }
 .left { text-align:left; }
+
+.hidden {
+    display: none;
+}

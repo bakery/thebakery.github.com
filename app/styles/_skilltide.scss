@@ -26,4 +26,32 @@
             }
         }
     }
+
+    .contact {
+        margin-bottom: 40px;
+    }
+
+    .field {
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 5px 5px 6px 5px;
+        }
+
+        textarea {
+            height: 113px
+        }
+    }
+
+    .hr-small {
+        margin-top: 40px;
+    }
+
 }

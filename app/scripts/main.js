@@ -5,9 +5,10 @@
 */
 
 function testing(){
-    return typeof window.__karma__ !== 'undefined'; 
+    return typeof window.__karma__ !== 'undefined';
 }
 
+// TODO: add parse
 
 require.config({
     baseUrl : "scripts/",
@@ -15,24 +16,34 @@ require.config({
     shim: {
         'underscore' : {exports: '_' },
         'backbone' : {exports: 'Backbone', deps: ['underscore']},
+        'backbone.wreqr' : { deps : ['backbone']},
+        'backbone.babysitter' : { deps : ['backbone']},
+        'marionette' : { deps : ['backbone']},
         'json' : {exports: 'JSON'},
-        'handlebars' :  {exports: 'Handlebars'}
+        'handlebars' :  {exports: 'Handlebars'},
+        'parse' : {exports: 'Parse'},
+        'jquery-validation' : {deps: ['jquery']}
     },
 
     paths: {
         jquery: 'vendor/jquery/jquery',
+        'jquery-validation': 'vendor/jquery-validation/jquery.validate',
         underscore: 'vendor/underscore/underscore',
         backbone: 'vendor/backbone/backbone',
+        marionette: 'vendor/backbone.marionette/lib/backbone.marionette',
+        'backbone.wreqr' : 'vendor/backbone.wreqr/lib/backbone.wreqr',
+        'backbone.babysitter' : 'vendor/backbone.babysitter/lib/backbone.babysitter',
         text : 'vendor/requirejs-text/text',
         json : 'vendor/json2/json2',
         handlebars : 'vendor/handlebars/handlebars',
+        parse : 'parse/parse',
         templates: '../templates'
     }
 });
 
 if (!testing()){
     require(['app'], function(Application) {
-        Application.run();
+        Application.start();
     });
 } else {
     var tests = [];
