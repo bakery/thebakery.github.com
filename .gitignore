@@ -5,4 +5,4 @@ _site
 node_modules
 .sass-cache
 app/styles/main.css
-app/scripts/vendor/*
+app/scripts/vendor
