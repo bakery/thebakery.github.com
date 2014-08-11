@@ -1,5 +1,5 @@
-define(["jquery", "marionette", "parse", "views/form", "settings"],
-    function($, Marionette, Parse, FormView, settings){
+define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
+    function($, Marionette, Backbone, Parse, FormView, settings){
 
         var application = new Backbone.Marionette.Application();
 
@@ -13,7 +13,6 @@ define(["jquery", "marionette", "parse", "views/form", "settings"],
 
 
         application.on('start', function(){
-
 
             // animate homepage scroll
             $('.down-arrow').click(function(){
