@@ -10,8 +10,6 @@ define(["jquery", "marionette", "models/contact", "text!./form.html", "jquery-va
             $(this.el).validate({
                 submitHandler: _.bind(this.__submitHandler, this)
             });
-
-            console.log('this is happening right?');
         },
 
         onSubmit : function(fields){

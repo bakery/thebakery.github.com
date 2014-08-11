@@ -22,7 +22,6 @@ define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
             // initialize form
             // hack to get around same js on index+skilltide pages       
             if($('#contact-form').length !== 0) {
-                console.log('inside');
                 var contactView = new FormView();
                 application.contactRegion.show(contactView);
             }
