@@ -6,9 +6,7 @@ define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
         Parse.initialize(settings.parseApplicationId, settings.parseApplicationKey);
 
         application.addRegions({
-            contactRegion: {
-                selector: '#contact-form'
-            }
+            contactRegion: '#contact-form'
         });
 
 
@@ -22,8 +20,12 @@ define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
             });
 
             // initialize form
-            var contactView = new FormView();
-            application.contactRegion.show(contactView);
+            // hack to get around same js on index+skilltide pages       
+            if($('#contact-form').length !== 0) {
+                console.log('inside');
+                var contactView = new FormView();
+                application.contactRegion.show(contactView);
+            }
 
         });
 
