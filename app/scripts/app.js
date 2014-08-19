@@ -1,4 +1,4 @@
-define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
+define(["jquery", "marionette", "backbone", "parse", "views/form", "settings", "slick"],
     function($, Marionette, Backbone, Parse, FormView, settings){
 
         var application = new Backbone.Marionette.Application();
@@ -17,6 +17,12 @@ define(["jquery", "marionette", "backbone", "parse", "views/form", "settings"],
                 $('html, body').animate({
                      scrollTop: $("#mission").offset().top
                  }, 1200);
+            });
+
+            $('.slick-testimonials').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 1
             });
 
             // initialize form

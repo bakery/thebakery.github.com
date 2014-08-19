@@ -22,12 +22,14 @@ require.config({
         'json' : {exports: 'JSON'},
         'handlebars' :  {exports: 'Handlebars'},
         'parse' : {exports: 'Parse'},
-        'jquery-validation' : {deps: ['jquery']}
+        'jquery-validation' : {deps: ['jquery']},
+        'slick' : {deps: ['jquery']}
     },
 
     paths: {
         jquery: 'vendor/jquery/jquery',
         'jquery-validation': 'vendor/jquery-validation/jquery.validate',
+        'slick' : 'lib/slick',
         underscore: 'vendor/underscore/underscore',
         backbone: 'vendor/backbone/backbone',
         marionette: 'vendor/backbone.marionette/lib/backbone.marionette',
