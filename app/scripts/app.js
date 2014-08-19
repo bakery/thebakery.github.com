@@ -21,8 +21,8 @@ define(["jquery", "marionette", "backbone", "parse", "views/form", "settings", "
 
             $('.slick-testimonials').slick({
                 centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 1
+                slidesToShow: 1,
+                speed: 600
             });
 
             // initialize form

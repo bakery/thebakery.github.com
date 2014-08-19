@@ -211,3 +211,12 @@ section {
     }
 }
 
+.testimony {
+    opacity: 0;
+    @include transition(opacity 0.3s);
+
+    &.slick-center {
+        opacity: 1;
+    }
+}
+
