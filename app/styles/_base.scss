@@ -83,20 +83,27 @@ figure {
 
 header {
 
-    $width-n-height:70px;
+    $width-n-height:100px;
 
     position: absolute; left: 50%; top:1em;
     width: $width-n-height; margin-left: -$width-n-height/2;
     z-index: 100; min-height: $width-n-height;
-    color: $header-font-color;
     text-align: center;
     border-radius: 40px;
     background: {
-        color: $header-color;
-        image: url("../images/icons/logo.png");
+        image: url("../images/icons/logo-white-hat.png");
         repeat: no-repeat;
-        position: 58% 52%;
-        size: 50px 50px;
+        size: cover;
+    }
+
+    &.black {
+        background-image: url("../images/icons/logo-black-hat.png");
+    }
+
+    &.small {
+        width: 75px;
+        min-height: 75px;
+        margin-left: -35px;
     }
 }
 
