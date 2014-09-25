@@ -117,17 +117,6 @@ h1 {
 	}
 }
 
-.mailing-signup {
-    margin-top: 30px;
-
-    .email {
-        width: 250px;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        padding: 4px 4px 5px 4px;
-    }
-}
-
 .screen-center {
     position: absolute;
     top: 40%;
@@ -174,7 +163,25 @@ section {
 
     p {
         font-size: 18px;
-        margin-top: 10px;
+    }
+
+    .email {
+        width: 250px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        padding: 4px 4px 5px 4px;
+    }
+}
+
+.services {
+    text-align: center;
+
+    img {
+        margin: 20px auto;
+    }
+
+    p {
+        padding: 0 10px;
     }
 }
 
@@ -221,3 +228,10 @@ section {
     }
 }
 
+.tech {
+    font-size: 11px;
+    background-color: #f3f3f3;
+    padding: 4px 6px;
+    margin-right: 6px;
+    border-radius: 3px
+}
